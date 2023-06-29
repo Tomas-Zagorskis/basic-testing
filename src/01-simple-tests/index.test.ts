@@ -1,34 +1,45 @@
-// Uncomment the code below and write your tests
 import { simpleCalculator, Action } from './index';
 
 describe('simpleCalculator tests', () => {
   test('should add two numbers', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: Action.Add })).toBe(5);
+    const calc = simpleCalculator({ a: 2, b: 3, action: Action.Add });
+
+    expect(calc).toBe(5);
   });
 
   test('should subtract two numbers', () => {
-    expect(simpleCalculator({ a: 5, b: 3, action: Action.Subtract })).toBe(2);
+    const calc = simpleCalculator({ a: 5, b: 3, action: Action.Subtract });
+
+    expect(calc).toBe(2);
   });
 
   test('should multiply two numbers', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: Action.Multiply })).toBe(6);
+    const calc = simpleCalculator({ a: 2, b: 3, action: Action.Multiply });
+
+    expect(calc).toBe(6);
   });
 
   test('should divide two numbers', () => {
-    expect(simpleCalculator({ a: 12, b: 3, action: Action.Divide })).toBe(4);
+    const calc = simpleCalculator({ a: 12, b: 3, action: Action.Divide });
+
+    expect(calc).toBe(4);
   });
 
   test('should exponentiate two numbers', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: Action.Exponentiate })).toBe(
-      8,
-    );
+    const calc = simpleCalculator({ a: 2, b: 3, action: Action.Exponentiate });
+
+    expect(calc).toBe(8);
   });
 
   test('should return null for invalid action', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: '**' })).toBeNull();
+    const calc = simpleCalculator({ a: 2, b: 3, action: '**' });
+
+    expect(calc).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
-    expect(simpleCalculator({ a: '2', b: 3, action: Action.Add })).toBeNull();
+    const calc = simpleCalculator({ a: '2', b: 3, action: Action.Add });
+
+    expect(calc).toBeNull();
   });
 });

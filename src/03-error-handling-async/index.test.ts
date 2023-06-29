@@ -8,9 +8,9 @@ import {
 
 describe('resolveValue', () => {
   test('should resolve provided value', async () => {
-    expect.assertions(1);
+    const value = await resolveValue(5);
 
-    expect(await resolveValue(5)).toBe(5);
+    expect(value).toBe(5);
   });
 });
 
@@ -57,6 +57,7 @@ describe('throwCustomError', () => {
 describe('rejectCustomError', () => {
   test('should reject custom error', async () => {
     expect.assertions(2);
+
     await expect(rejectCustomError()).rejects.toBeInstanceOf(MyAwesomeError);
     await expect(rejectCustomError()).rejects.toHaveProperty(
       'message',
