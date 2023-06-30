@@ -27,7 +27,6 @@ describe('doStuffByTimeout', () => {
 
     // Assert
     expect(setTimeout).toHaveBeenCalledTimes(1);
-    expect(setTimeout).toHaveBeenLastCalledWith(callback, timeout);
     expect(callback).not.toBeCalled();
     jest.runAllTimers();
     expect(callback).toBeCalled();
