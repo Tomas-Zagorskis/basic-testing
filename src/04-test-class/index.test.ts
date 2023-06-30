@@ -10,10 +10,6 @@ import { random } from 'lodash';
 jest.mock('lodash');
 
 describe('BankAccount', () => {
-  beforeEach(() => {
-    (random as jest.Mock).mockClear();
-  });
-
   test('should create account with initial balance', () => {
     const balance = 20;
     const myBankAccount = getBankAccount(balance);
