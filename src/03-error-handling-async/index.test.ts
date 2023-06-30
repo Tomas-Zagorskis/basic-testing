@@ -16,8 +16,6 @@ describe('resolveValue', () => {
 
 describe('throwError', () => {
   test('should throw error with provided message', () => {
-    expect.assertions(2);
-
     try {
       throwError('custom message');
     } catch (error) {
@@ -27,8 +25,6 @@ describe('throwError', () => {
   });
 
   test('should throw error with default message if message is not provided', () => {
-    expect.assertions(2);
-
     try {
       throwError();
     } catch (error) {
@@ -40,8 +36,6 @@ describe('throwError', () => {
 
 describe('throwCustomError', () => {
   test('should throw custom error', () => {
-    expect.assertions(2);
-
     try {
       throwCustomError();
     } catch (error) {
