@@ -91,7 +91,7 @@ describe('readFileAsynchronously', () => {
   const mockFullPath = '/files/test.txt';
 
   beforeAll(() => {
-    jest.spyOn(global.console, 'error').mockImplementation(() => {});
+    jest.spyOn(global.console, 'error').mockImplementation();
   });
 
   afterAll(() => {
